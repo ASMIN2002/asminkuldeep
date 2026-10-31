@@ -1,14 +1,18 @@
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
-    background: rgba(10, 10, 15, .85);
+    background: rgba(248, 249, 255, .85);
     backdrop-filter: blur(14px);
     position: sticky;
     top: 0;
     z-index: 100;
     border-bottom: 1px solid var(--border)
+}
+
+.navbar-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem
 }
 
 .nav-logo {
@@ -17,7 +21,7 @@
     gap: .7rem;
     font-weight: 700;
     font-size: 1.15rem;
-    color: #fff;
+    color: #1a1a2e;
     text-decoration: none;
     letter-spacing: .5px
 }
@@ -38,7 +42,7 @@
 }
 
 .nav-links a {
-    color: var(--text-muted);
+    color: #4a4a68;
     text-decoration: none;
     font-size: .95rem;
     font-weight: 500;
@@ -49,7 +53,7 @@
 
 .nav-links a:hover,
 .nav-links a.active {
-    color: #fff
+    color: #3b6fe0
 }
 
 .nav-links a.active::after {
@@ -76,7 +80,7 @@
 .nav-toggle span {
     width: 24px;
     height: 2px;
-    background: #fff;
+    background: #1a1a2e;
     transition: transform .3s ease, opacity .3s ease
 }
 
@@ -93,10 +97,6 @@
 }
 
 @media(max-width:768px) {
-    .navbar {
-        padding: .9rem 1.2rem
-    }
-
     .nav-logo-img {
         width: 34px;
         height: 34px
@@ -111,7 +111,7 @@
         top: 100%;
         left: 0;
         right: 0;
-        background: #0a0a0f;
+        background: #f8f9ff;
         flex-direction: column;
         gap: 0;
         padding: 0 1.2rem;

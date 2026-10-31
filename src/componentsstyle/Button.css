@@ -15,23 +15,23 @@
 }
 
 .btn-primary {
-    background: var(--gradient);
+    background: linear-gradient(135deg, #4f8cff, #a855f7);
     color: #fff;
-    box-shadow: 0 4px 15px rgba(79, 140, 255, .3)
+    box-shadow: 0 6px 20px rgba(79, 140, 255, .35)
 }
 
 .btn-primary:hover {
-    box-shadow: 0 8px 25px rgba(168, 85, 247, .45)
+    box-shadow: 0 10px 30px rgba(168, 85, 247, .45)
 }
 
 .btn-outline {
     background: transparent;
-    color: var(--accent);
-    border: 2px solid var(--accent)
+    color: #3b6fe0;
+    border: 2px solid #4f8cff
 }
 
 .btn-outline:hover {
-    background: var(--accent);
+    background: #4f8cff;
     color: #fff
 }
 

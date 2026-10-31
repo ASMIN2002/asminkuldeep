@@ -8,19 +8,21 @@ export default function Navbar() {
     const close = () => setOpen(false);
     return (
         <nav className="navbar">
-            <Link to="/" className="nav-logo" onClick={close}>
-                <img src={logo} alt="Asmin" className="nav-logo-img" />
-                <span>{personal.name.split(" ")[0]}</span>
-            </Link>
-            <button className={`nav-toggle ${open ? "open" : ""}`} onClick={() => setOpen(!open)} aria-label="Menu">
-                <span /><span /><span />
-            </button>
-            <div className={`nav-links ${open ? "open" : ""}`}>
-                {navLinks.map((l) => (
-                    <NavLink key={l.path} to={l.path} end={l.path === "/"} onClick={close} className={({ isActive }) => (isActive ? "active" : "")}>
-                        {l.label}
-                    </NavLink>
-                ))}
+            <div className="container navbar-inner">
+                <Link to="/" className="nav-logo" onClick={close}>
+                    <img src={logo} alt="Asmin" className="nav-logo-img" />
+                    <span>{personal.name.split(" ")[0]}</span>
+                </Link>
+                <button className={`nav-toggle ${open ? "open" : ""}`} onClick={() => setOpen(!open)} aria-label="Menu">
+                    <span /><span /><span />
+                </button>
+                <div className={`nav-links ${open ? "open" : ""}`}>
+                    {navLinks.map((l) => (
+                        <NavLink key={l.path} to={l.path} end={l.path === "/"} onClick={close} className={({ isActive }) => (isActive ? "active" : "")}>
+                            {l.label}
+                        </NavLink>
+                    ))}
+                </div>
             </div>
         </nav>
     );

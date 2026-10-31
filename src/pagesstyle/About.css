@@ -1,20 +1,114 @@
 .about {
-    padding: 4rem 2rem;
-    max-width: 1100px;
-    margin: 0 auto
+    padding: 4rem 0 5rem;
+    position: relative;
+    overflow: hidden;
+    background: radial-gradient(circle at 10% 10%, rgba(79, 140, 255, .12), transparent 40%), radial-gradient(circle at 90% 90%, rgba(168, 85, 247, .12), transparent 40%), linear-gradient(160deg, #f8f9ff 0%, #eef1ff 50%, #f5edff 100%);
+    min-height: calc(100vh - 70px)
+}
+
+.about-hero {
+    display: grid;
+    grid-template-columns: 1fr 1.4fr;
+    gap: 3rem;
+    align-items: center;
+    background: rgba(255, 255, 255, .7);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(79, 140, 255, .2);
+    border-radius: 24px;
+    padding: 2.5rem;
+    margin-bottom: 3rem;
+    box-shadow: 0 20px 60px rgba(79, 140, 255, .12);
+    animation: fadeUp .7s ease
+}
+
+.about-hero-img {
+    position: relative;
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+    border-radius: 20px;
+    overflow: hidden;
+    background: linear-gradient(135deg, #eef1ff, #f5edff);
+    animation: float 6s ease-in-out infinite;
+    box-shadow: 0 15px 40px rgba(79, 140, 255, .25);
+    border: 3px solid #fff
+}
+
+.about-hero-img img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    border-radius: 17px
+}
+
+.about-hello {
+    color: #4f8cff;
+    font-size: .95rem;
+    font-weight: 600;
+    margin-bottom: .4rem;
+    letter-spacing: .5px
+}
+
+.about-hero-text h2 {
+    font-size: 2.2rem;
+    font-weight: 800;
+    margin-bottom: .6rem;
+    background: linear-gradient(135deg, #3b6fe0, #8b3fd6);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height: 1.2
+}
+
+.about-hero-role {
+    color: #2a2a44;
+    font-size: 1.05rem;
+    margin-bottom: 1rem;
+    font-weight: 500
+}
+
+.about-location-link a {
+    display: inline-block;
+    color: #3b6fe0;
+    font-weight: 600;
+    font-size: .95rem;
+    text-decoration: none;
+    padding: .5rem 1rem;
+    border-radius: 999px;
+    background: rgba(79, 140, 255, .12);
+    border: 1px solid rgba(79, 140, 255, .35);
+    transition: transform .2s, background .2s
+}
+
+.about-location-link a:hover {
+    transform: translateY(-2px);
+    background: rgba(79, 140, 255, .22)
 }
 
 .about-grid {
     display: grid;
-    grid-template-columns: 1.2fr 1fr;
+    grid-template-columns: 1.1fr 1fr;
     gap: 2.5rem
+}
+
+.about-text {
+    background: rgba(255, 255, 255, .7);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(79, 140, 255, .2);
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 10px 30px rgba(79, 140, 255, .08);
+    animation: fadeUp .9s ease
 }
 
 .about-profile {
     display: flex;
     align-items: center;
     gap: 1.2rem;
-    margin-bottom: 1.5rem
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid rgba(79, 140, 255, .15)
 }
 
 .about-profile-img {
@@ -23,34 +117,45 @@
     border-radius: 50%;
     object-fit: cover;
     padding: 3px;
-    background: var(--gradient)
+    background: var(--gradient);
+    box-shadow: 0 8px 20px rgba(79, 140, 255, .3)
 }
 
 .about-profile h3 {
-    color: #fff;
-    font-size: 1.2rem
+    color: #1a1a2e;
+    font-size: 1.2rem;
+    font-weight: 700
 }
 
 .about-role {
-    color: var(--accent);
+    color: #4f8cff;
     font-size: .9rem;
     font-weight: 500
 }
 
 .about-text p {
-    color: var(--text-muted);
-    line-height: 1.8;
-    margin-bottom: 1.2rem
+    color: #4a4a68;
+    line-height: 1.85;
+    margin-bottom: 1.2rem;
+    font-size: .96rem
 }
 
 .about-location {
-    color: var(--accent) !important;
-    font-weight: 500
+    color: #3b6fe0 !important;
+    font-weight: 600;
+    font-size: .95rem
 }
 
 .about-langs {
-    color: var(--text-muted);
-    font-size: .95rem
+    color: #4a4a68;
+    font-size: .95rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(79, 140, 255, .15);
+    margin-top: 1rem
+}
+
+.about-langs strong {
+    color: #1a1a2e
 }
 
 .about-side {
@@ -60,27 +165,50 @@
 }
 
 .about-card {
-    background: var(--bg-card);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 1.5rem;
-    transition: border-color .25s ease
+    background: rgba(255, 255, 255, .8);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(79, 140, 255, .2);
+    border-radius: 20px;
+    padding: 1.8rem;
+    transition: transform .3s ease, border-color .3s ease, box-shadow .3s ease;
+    box-shadow: 0 10px 30px rgba(79, 140, 255, .08)
 }
 
 .about-card:hover {
-    border-color: var(--accent)
+    transform: translateY(-6px);
+    border-color: #4f8cff;
+    box-shadow: 0 20px 50px rgba(79, 140, 255, .18)
 }
 
 .about-card h3 {
-    color: #fff;
-    margin-bottom: 1rem;
-    font-size: 1.05rem
+    color: #1a1a2e;
+    margin-bottom: 1.2rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: .5rem
 }
 
-.about-card p {
-    color: var(--text-muted);
-    font-size: .9rem;
-    margin-bottom: .6rem
+.achievement-item {
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(79, 140, 255, .15);
+    animation: slideIn .6s ease
+}
+
+.achievement-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0
+}
+
+.achievement-item p {
+    color: #4a4a68;
+    font-size: .92rem;
+    line-height: 1.6;
+    margin-bottom: .5rem;
+    font-weight: 500
 }
 
 .edu-item {
@@ -88,7 +216,14 @@
     flex-direction: column;
     margin-bottom: 1rem;
     padding-bottom: 1rem;
-    border-bottom: 1px solid var(--border)
+    border-bottom: 1px solid rgba(79, 140, 255, .15);
+    position: relative;
+    animation: slideIn .6s ease;
+    transition: transform .2s
+}
+
+.edu-item:hover {
+    transform: translateX(4px)
 }
 
 .edu-item:last-child {
@@ -98,31 +233,149 @@
 }
 
 .edu-item strong {
-    color: var(--text);
-    font-size: .92rem
+    color: #1a1a2e;
+    font-size: .94rem;
+    margin-bottom: .3rem;
+    font-weight: 700
 }
 
 .edu-item span {
-    color: var(--text-muted);
-    font-size: .85rem
+    color: #4a4a68;
+    font-size: .85rem;
+    line-height: 1.5
 }
 
 .edu-item small {
-    color: var(--accent);
+    color: #4f8cff;
     font-size: .8rem;
-    margin-top: .2rem
+    margin-top: .3rem;
+    font-weight: 600
+}
+
+.about-visit {
+    display: inline-block;
+    margin-top: .6rem;
+    color: #4f8cff;
+    font-size: .84rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color .2s, transform .2s;
+    align-self: flex-start;
+    padding: .3rem .8rem;
+    border-radius: 6px;
+    background: rgba(79, 140, 255, .1)
+}
+
+.about-visit:hover {
+    color: #fff;
+    background: linear-gradient(135deg, #4f8cff, #a855f7);
+    transform: translateX(4px)
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px)
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0)
+    }
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0)
+    }
+
+    50% {
+        transform: translateY(-10px)
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-10px)
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0)
+    }
+}
+
+@media(prefers-reduced-motion:reduce) {
+
+    .about-hero-img,
+    .about-hero,
+    .about-text,
+    .achievement-item,
+    .edu-item {
+        animation: none
+    }
 }
 
 @media(max-width:900px) {
+    .about {
+        padding: 3rem 0 4rem
+    }
+
+    .about-hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding: 2rem;
+        gap: 2rem
+    }
+
+    .about-hero-img {
+        max-width: 260px
+    }
+
     .about-grid {
         grid-template-columns: 1fr;
         gap: 2rem
     }
+
+    .about-hero-text h2 {
+        font-size: 1.8rem
+    }
+
+    .about-location-link a {
+        font-size: .88rem
+    }
+
+    .about-text {
+        padding: 1.6rem
+    }
+
+    .about-card {
+        padding: 1.5rem
+    }
 }
 
-@media(max-width:480px) {
+@media(max-width:600px) {
     .about {
-        padding: 2.5rem 1.2rem
+        padding: 2.5rem 0 3rem
+    }
+
+    .about-hero {
+        padding: 1.5rem
+    }
+
+    .about-hero-img {
+        max-width: 220px
+    }
+
+    .about-hero-text h2 {
+        font-size: 1.5rem
+    }
+
+    .about-hero-role {
+        font-size: .95rem
     }
 
     .about-card {
@@ -132,5 +385,15 @@
     .about-profile-img {
         width: 65px;
         height: 65px
+    }
+
+    .about-profile {
+        flex-direction: column;
+        text-align: center;
+        gap: .8rem
+    }
+
+    .about-visit {
+        font-size: .8rem
     }
 }
