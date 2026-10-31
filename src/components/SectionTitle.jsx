@@ -1,0 +1,2 @@
+import "../componentsstyle/SectionTitle.css";
+export default function SectionTitle({ title, subtitle }) { return (<div className="section-title"><h2>{title}</h2>{subtitle && <p>{subtitle}</p>}<span className="section-line" /></div>) }

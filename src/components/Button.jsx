@@ -1,0 +1,3 @@
+import { Link } from "react-router-dom";
+import "../componentsstyle/Button.css";
+export default function Button({ children, to, href, variant = "primary" }) { const cls = `btn btn-${variant}`; if (to) return <Link to={to} className={cls}>{children}</Link>; if (href) return <a href={href} className={cls} target="_blank" rel="noopener noreferrer">{children}</a>; return <button className={cls}>{children}</button> }

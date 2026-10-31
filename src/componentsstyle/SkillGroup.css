@@ -1,0 +1,51 @@
+.skill-group {
+    background: #1a1a1a;
+    border: 1px solid #2a2a2a;
+    border-radius: 12px;
+    padding: 1.5rem;
+    transition: border-color .25s ease
+}
+
+.skill-group:hover {
+    border-color: #4f8cff
+}
+
+.skill-group h3 {
+    color: #fff;
+    font-size: 1.05rem;
+    margin-bottom: 1rem
+}
+
+.skill-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem
+}
+
+.skill-items span {
+    background: #252525;
+    color: #ccc;
+    font-size: .82rem;
+    padding: .4rem .8rem;
+    border-radius: 6px;
+    transition: background .2s, color .2s
+}
+
+.skill-items span:hover {
+    background: #4f8cff;
+    color: #fff
+}
+
+@media(max-width:480px) {
+    .skill-group {
+        padding: 1.2rem
+    }
+
+    .skill-group h3 {
+        font-size: .95rem
+    }
+
+    .skill-items span {
+        font-size: .78rem
+    }
+}

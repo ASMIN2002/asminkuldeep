@@ -1,0 +1,109 @@
+.experience {
+    padding: 4rem 2rem;
+    max-width: 1000px;
+    margin: 0 auto
+}
+
+.exp-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-bottom: 4rem
+}
+
+.exp-card {
+    background: #1a1a1a;
+    border: 1px solid #2a2a2a;
+    border-radius: 12px;
+    padding: 1.8rem;
+    transition: border-color .25s
+}
+
+.exp-card:hover {
+    border-color: #4f8cff
+}
+
+.exp-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: .5rem
+}
+
+.exp-head h3 {
+    color: #fff;
+    font-size: 1.15rem
+}
+
+.exp-head span {
+    color: #4f8cff;
+    font-size: .85rem;
+    font-weight: 600
+}
+
+.exp-org {
+    color: #999;
+    font-size: .9rem;
+    margin: .4rem 0 1rem
+}
+
+.exp-card ul {
+    padding-left: 1.2rem;
+    color: #bbb;
+    font-size: .92rem;
+    line-height: 1.7
+}
+
+.cert-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.2rem
+}
+
+.cert-card {
+    background: #1a1a1a;
+    border: 1px solid #2a2a2a;
+    border-radius: 12px;
+    padding: 1.3rem;
+    transition: border-color .25s
+}
+
+.cert-card:hover {
+    border-color: #4f8cff
+}
+
+.cert-card h4 {
+    color: #eee;
+    font-size: .98rem;
+    margin-bottom: .3rem
+}
+
+.cert-card p {
+    color: #999;
+    font-size: .85rem
+}
+
+.cert-card span {
+    color: #4f8cff;
+    font-size: .8rem;
+    font-weight: 600
+}
+
+@media(max-width:480px) {
+    .experience {
+        padding: 2.5rem 1.2rem
+    }
+
+    .exp-card {
+        padding: 1.3rem
+    }
+
+    .exp-head h3 {
+        font-size: 1rem
+    }
+
+    .cert-grid {
+        grid-template-columns: 1fr
+    }
+}

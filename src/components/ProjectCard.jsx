@@ -1,0 +1,2 @@
+import "../componentsstyle/ProjectCard.css";
+export default function ProjectCard({ project }) { return (<article className="project-card"><h3>{project.title}</h3><p className="project-role">{project.role}</p><p className="project-desc">{project.desc}</p><div className="project-tech">{project.tech.map(t => <span key={t}>{t}</span>)}</div>{project.link && <a href={project.link} className="project-link" target="_blank" rel="noopener noreferrer">View Live →</a>}</article>) }

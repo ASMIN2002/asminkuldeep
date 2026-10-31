@@ -1,0 +1,73 @@
+.project-card {
+    background: #1a1a1a;
+    border: 1px solid #2a2a2a;
+    border-radius: 12px;
+    padding: 1.8rem;
+    transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease;
+    display: flex;
+    flex-direction: column
+}
+
+.project-card:hover {
+    transform: translateY(-6px);
+    border-color: #4f8cff;
+    box-shadow: 0 10px 30px rgba(79, 140, 255, .15)
+}
+
+.project-card h3 {
+    color: #fff;
+    font-size: 1.2rem;
+    margin-bottom: .4rem
+}
+
+.project-role {
+    color: #4f8cff;
+    font-size: .85rem;
+    font-weight: 600;
+    margin-bottom: .8rem
+}
+
+.project-desc {
+    color: #bbb;
+    font-size: .92rem;
+    line-height: 1.6;
+    margin-bottom: 1.2rem;
+    flex: 1
+}
+
+.project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem;
+    margin-bottom: 1rem
+}
+
+.project-tech span {
+    background: #252525;
+    color: #ccc;
+    font-size: .75rem;
+    padding: .3rem .7rem;
+    border-radius: 6px
+}
+
+.project-link {
+    color: #4f8cff;
+    font-weight: 600;
+    font-size: .9rem;
+    text-decoration: none;
+    transition: color .2s
+}
+
+.project-link:hover {
+    color: #82aaff
+}
+
+@media(max-width:480px) {
+    .project-card {
+        padding: 1.3rem
+    }
+
+    .project-card h3 {
+        font-size: 1.05rem
+    }
+}
