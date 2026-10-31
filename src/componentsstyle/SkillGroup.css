@@ -1,13 +1,14 @@
 .skill-group {
-    background: #1a1a1a;
-    border: 1px solid #2a2a2a;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
     border-radius: 12px;
     padding: 1.5rem;
-    transition: border-color .25s ease
+    transition: border-color .25s ease;
+    height: 100%
 }
 
 .skill-group:hover {
-    border-color: #4f8cff
+    border-color: var(--accent)
 }
 
 .skill-group h3 {
@@ -23,8 +24,8 @@
 }
 
 .skill-items span {
-    background: #252525;
-    color: #ccc;
+    background: #1e1e2e;
+    color: var(--text-muted);
     font-size: .82rem;
     padding: .4rem .8rem;
     border-radius: 6px;
@@ -32,7 +33,7 @@
 }
 
 .skill-items span:hover {
-    background: #4f8cff;
+    background: var(--gradient);
     color: #fff
 }
 

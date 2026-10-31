@@ -10,7 +10,7 @@
 }
 
 .section-title p {
-    color: #aaa;
+    color: var(--text-muted);
     font-size: 1rem;
     max-width: 600px;
     margin: 0 auto
@@ -20,7 +20,7 @@
     display: block;
     width: 60px;
     height: 3px;
-    background: #4f8cff;
+    background: var(--gradient);
     margin: 1rem auto 0;
     border-radius: 2px
 }

@@ -1,20 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box
 }
 
+:root {
+  --bg: #0a0a0f;
+  --bg-card: #141420;
+  --border: #242436;
+  --accent: #4f8cff;
+  --accent2: #a855f7;
+  --text: #e8e8f0;
+  --text-muted: #9a9ab0;
+  --gradient: linear-gradient(135deg, #4f8cff, #a855f7)
+}
+
 html,
 body {
   width: 100%;
-  overflow-x: hidden
+  overflow-x: hidden;
+  scroll-behavior: smooth
 }
 
 body {
-  font-family: system-ui, -apple-system, sans-serif;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
   line-height: 1.6;
-  background: #0f0f0f;
-  color: #eee
+  background: var(--bg);
+  color: var(--text)
+}
+
+::-webkit-scrollbar {
+  width: 10px
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0a0f
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--gradient);
+  border-radius: 5px
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #4f8cff
 }
 
 .loader {
@@ -22,6 +53,25 @@ body {
   align-items: center;
   justify-content: center;
   min-height: 60vh;
-  color: #4f8cff;
+  color: var(--accent);
   font-size: 1.1rem
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity .7s ease, transform .7s ease
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0)
+}
+
+@media(prefers-reduced-motion:reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none
+  }
 }

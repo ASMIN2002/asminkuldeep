@@ -1,4 +1,41 @@
 import { personal, summary, education, languages, achievements } from "../data/content";
 import SectionTitle from "../components/SectionTitle";
+import profile from "../assets/AerodeckDP.png";
 import "../pagesstyle/About.css";
-export default function About() { return (<section className="about"><SectionTitle title="About Me" subtitle="A quick look at who I am" /><div className="about-grid"><div className="about-text"><p>{summary}</p><p className="about-location">📍 {personal.location}</p><div className="about-langs"><strong>Languages:</strong> {languages.join(", ")}</div></div><div className="about-side"><div className="about-card"><h3>Achievements</h3>{achievements.map(a => <p key={a.title}>🏆 {a.title} — {a.org} ({a.year})</p>)}</div><div className="about-card"><h3>Education</h3>{education.map(e => <div key={e.degree} className="edu-item"><strong>{e.degree}</strong><span>{e.org}</span><small>{e.period}</small></div>)}</div></div></div></section>) }
+export default function About() {
+    return (
+        <section className="about">
+            <SectionTitle title="About Me" subtitle="A quick look at who I am" />
+            <div className="about-grid">
+                <div className="about-text reveal">
+                    <div className="about-profile">
+                        <img src={profile} alt={personal.name} className="about-profile-img" />
+                        <div>
+                            <h3>{personal.name}</h3>
+                            <p className="about-role">{personal.role}</p>
+                        </div>
+                    </div>
+                    <p>{summary}</p>
+                    <p className="about-location">📍 {personal.location}</p>
+                    <div className="about-langs"><strong>Languages:</strong> {languages.join(", ")}</div>
+                </div>
+                <div className="about-side">
+                    <div className="about-card reveal">
+                        <h3>Achievements</h3>
+                        {achievements.map((a) => <p key={a.title}>🏆 {a.title} — {a.org} ({a.year})</p>)}
+                    </div>
+                    <div className="about-card reveal">
+                        <h3>Education</h3>
+                        {education.map((e) => (
+                            <div key={e.degree} className="edu-item">
+                                <strong>{e.degree}</strong>
+                                <span>{e.org}</span>
+                                <small>{e.period}</small>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </div>
+        </section>
+    );
+}

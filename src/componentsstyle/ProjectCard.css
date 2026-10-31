@@ -1,16 +1,17 @@
 .project-card {
-    background: #1a1a1a;
-    border: 1px solid #2a2a2a;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
     border-radius: 12px;
     padding: 1.8rem;
     transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease;
     display: flex;
-    flex-direction: column
+    flex-direction: column;
+    height: 100%
 }
 
 .project-card:hover {
     transform: translateY(-6px);
-    border-color: #4f8cff;
+    border-color: var(--accent);
     box-shadow: 0 10px 30px rgba(79, 140, 255, .15)
 }
 
@@ -21,14 +22,14 @@
 }
 
 .project-role {
-    color: #4f8cff;
+    color: var(--accent);
     font-size: .85rem;
     font-weight: 600;
     margin-bottom: .8rem
 }
 
 .project-desc {
-    color: #bbb;
+    color: var(--text-muted);
     font-size: .92rem;
     line-height: 1.6;
     margin-bottom: 1.2rem;
@@ -43,15 +44,15 @@
 }
 
 .project-tech span {
-    background: #252525;
-    color: #ccc;
+    background: #1e1e2e;
+    color: var(--text-muted);
     font-size: .75rem;
     padding: .3rem .7rem;
     border-radius: 6px
 }
 
 .project-link {
-    color: #4f8cff;
+    color: var(--accent);
     font-weight: 600;
     font-size: .9rem;
     text-decoration: none;
@@ -59,7 +60,7 @@
 }
 
 .project-link:hover {
-    color: #82aaff
+    color: var(--accent2)
 }
 
 @media(max-width:480px) {

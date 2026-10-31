@@ -1,40 +1,87 @@
 .home {
-    min-height: calc(100vh - 130px);
+    min-height: calc(100vh - 70px);
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     padding: 3rem 2rem;
-    text-align: center
+    text-align: center;
+    position: relative;
+    overflow: hidden
+}
+
+.home::before {
+    content: "";
+    position: absolute;
+    top: -30%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(79, 140, 255, .15), transparent 70%);
+    pointer-events: none;
+    z-index: 0
 }
 
 .home-content {
     max-width: 750px;
-    animation: fadeUp .6s ease
+    animation: fadeUp .7s ease;
+    position: relative;
+    z-index: 1
+}
+
+.home-image-wrap {
+    width: 160px;
+    height: 160px;
+    margin: 0 auto 1.5rem;
+    border-radius: 50%;
+    padding: 4px;
+    background: var(--gradient);
+    animation: float 4s ease-in-out infinite
+}
+
+.home-image {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    background: var(--bg-card)
 }
 
 .home-greet {
-    color: #4f8cff;
+    color: var(--accent);
     font-size: 1.05rem;
     font-weight: 600;
-    margin-bottom: .5rem
+    margin-bottom: .4rem
 }
 
-.home h1 {
+.home-name {
     font-size: 3rem;
     color: #fff;
     margin-bottom: .5rem;
-    line-height: 1.2
+    line-height: 1.15;
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent
 }
 
-.home h2 {
+.home-role {
     font-size: 1.4rem;
-    color: #4f8cff;
+    color: var(--accent2);
     font-weight: 500;
-    margin-bottom: 1.2rem
+    margin-bottom: 1.2rem;
+    min-height: 2rem
+}
+
+.cursor {
+    color: var(--accent);
+    animation: blink 1s step-end infinite
 }
 
 .home-tagline {
-    color: #aaa;
+    color: var(--text-muted);
     font-size: 1.05rem;
     line-height: 1.7;
     margin-bottom: 2rem
@@ -45,6 +92,18 @@
     gap: 1rem;
     justify-content: center;
     flex-wrap: wrap
+}
+
+.scroll-indicator {
+    position: absolute;
+    bottom: 1.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--accent);
+    font-size: 1.5rem;
+    text-decoration: none;
+    animation: bounce 2s infinite;
+    z-index: 1
 }
 
 @keyframes fadeUp {
@@ -59,17 +118,67 @@
     }
 }
 
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0)
+    }
+
+    50% {
+        transform: translateY(-10px)
+    }
+}
+
+@keyframes blink {
+
+    0%,
+    100% {
+        opacity: 1
+    }
+
+    50% {
+        opacity: 0
+    }
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translate(-50%, 0)
+    }
+
+    50% {
+        transform: translate(-50%, 10px)
+    }
+}
+
+@media(prefers-reduced-motion:reduce) {
+
+    .home-image-wrap,
+    .cursor,
+    .scroll-indicator {
+        animation: none
+    }
+}
+
 @media(max-width:768px) {
-    .home h1 {
+    .home-name {
         font-size: 2.2rem
     }
 
-    .home h2 {
+    .home-role {
         font-size: 1.2rem
     }
 
     .home-tagline {
         font-size: .95rem
+    }
+
+    .home-image-wrap {
+        width: 130px;
+        height: 130px
     }
 }
 
@@ -78,11 +187,11 @@
         padding: 2rem 1.2rem
     }
 
-    .home h1 {
+    .home-name {
         font-size: 1.8rem
     }
 
-    .home h2 {
+    .home-role {
         font-size: 1.05rem
     }
 
@@ -92,5 +201,14 @@
 
     .home-cta {
         gap: .7rem
+    }
+
+    .home-image-wrap {
+        width: 110px;
+        height: 110px
+    }
+
+    .scroll-indicator {
+        display: none
     }
 }

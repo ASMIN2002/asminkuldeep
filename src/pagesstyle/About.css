@@ -10,19 +10,46 @@
     gap: 2.5rem
 }
 
+.about-profile {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    margin-bottom: 1.5rem
+}
+
+.about-profile-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    padding: 3px;
+    background: var(--gradient)
+}
+
+.about-profile h3 {
+    color: #fff;
+    font-size: 1.2rem
+}
+
+.about-role {
+    color: var(--accent);
+    font-size: .9rem;
+    font-weight: 500
+}
+
 .about-text p {
-    color: #bbb;
+    color: var(--text-muted);
     line-height: 1.8;
     margin-bottom: 1.2rem
 }
 
 .about-location {
-    color: #4f8cff !important;
+    color: var(--accent) !important;
     font-weight: 500
 }
 
 .about-langs {
-    color: #aaa;
+    color: var(--text-muted);
     font-size: .95rem
 }
 
@@ -33,10 +60,15 @@
 }
 
 .about-card {
-    background: #1a1a1a;
-    border: 1px solid #2a2a2a;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
     border-radius: 12px;
-    padding: 1.5rem
+    padding: 1.5rem;
+    transition: border-color .25s ease
+}
+
+.about-card:hover {
+    border-color: var(--accent)
 }
 
 .about-card h3 {
@@ -46,7 +78,7 @@
 }
 
 .about-card p {
-    color: #bbb;
+    color: var(--text-muted);
     font-size: .9rem;
     margin-bottom: .6rem
 }
@@ -56,7 +88,7 @@
     flex-direction: column;
     margin-bottom: 1rem;
     padding-bottom: 1rem;
-    border-bottom: 1px solid #2a2a2a
+    border-bottom: 1px solid var(--border)
 }
 
 .edu-item:last-child {
@@ -66,17 +98,17 @@
 }
 
 .edu-item strong {
-    color: #eee;
+    color: var(--text);
     font-size: .92rem
 }
 
 .edu-item span {
-    color: #999;
+    color: var(--text-muted);
     font-size: .85rem
 }
 
 .edu-item small {
-    color: #4f8cff;
+    color: var(--accent);
     font-size: .8rem;
     margin-top: .2rem
 }
@@ -95,5 +127,10 @@
 
     .about-card {
         padding: 1.2rem
+    }
+
+    .about-profile-img {
+        width: 65px;
+        height: 65px
     }
 }

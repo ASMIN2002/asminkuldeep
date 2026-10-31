@@ -5,15 +5,20 @@
 }
 
 .contact-card {
-    background: #1a1a1a;
-    border: 1px solid #2a2a2a;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
     border-radius: 16px;
     padding: 2.5rem;
-    text-align: center
+    text-align: center;
+    transition: border-color .25s
+}
+
+.contact-card:hover {
+    border-color: var(--accent)
 }
 
 .contact-text {
-    color: #bbb;
+    color: var(--text-muted);
     font-size: 1rem;
     line-height: 1.7;
     margin-bottom: 1.8rem
@@ -28,7 +33,7 @@
 }
 
 .contact-email {
-    color: #4f8cff;
+    color: var(--accent);
     font-size: .95rem;
     font-weight: 500
 }

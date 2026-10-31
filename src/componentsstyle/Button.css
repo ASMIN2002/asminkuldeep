@@ -1,6 +1,6 @@
 .btn {
     display: inline-block;
-    padding: .7rem 1.6rem;
+    padding: .75rem 1.7rem;
     border-radius: 8px;
     font-weight: 600;
     font-size: .95rem;
@@ -15,28 +15,29 @@
 }
 
 .btn-primary {
-    background: #4f8cff;
-    color: #fff
+    background: var(--gradient);
+    color: #fff;
+    box-shadow: 0 4px 15px rgba(79, 140, 255, .3)
 }
 
 .btn-primary:hover {
-    box-shadow: 0 6px 20px rgba(79, 140, 255, .4)
+    box-shadow: 0 8px 25px rgba(168, 85, 247, .45)
 }
 
 .btn-outline {
     background: transparent;
-    color: #4f8cff;
-    border: 2px solid #4f8cff
+    color: var(--accent);
+    border: 2px solid var(--accent)
 }
 
 .btn-outline:hover {
-    background: #4f8cff;
+    background: var(--accent);
     color: #fff
 }
 
 @media(max-width:480px) {
     .btn {
-        padding: .6rem 1.2rem;
+        padding: .65rem 1.3rem;
         font-size: .9rem
     }
 }
