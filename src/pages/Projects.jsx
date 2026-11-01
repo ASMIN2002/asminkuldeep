@@ -5,13 +5,15 @@ import "../pagesstyle/Projects.css";
 export default function Projects() {
     return (
         <section className="projects">
-            <SectionTitle title="Projects" subtitle="Things I've built" />
-            <div className="projects-grid">
-                {projects.map((p) => (
-                    <div className="reveal" key={p.title}>
-                        <ProjectCard project={p} />
-                    </div>
-                ))}
+            <div className="container">
+                <SectionTitle title="Projects" subtitle="Things I've built — from live products to Java applications" />
+                <div className="projects-grid">
+                    {projects.map((p) => (
+                        <div className="reveal" key={p.title}>
+                            <ProjectCard project={p} />
+                        </div>
+                    ))}
+                </div>
             </div>
         </section>
     );

@@ -4,6 +4,23 @@
     background: radial-gradient(circle at 10% 10%, rgba(79, 140, 255, .1), transparent 40%), radial-gradient(circle at 90% 90%, rgba(168, 85, 247, .1), transparent 40%), linear-gradient(160deg, #f8f9ff, #eef1ff 50%, #f5edff)
 }
 
+.skills-section-title {
+    margin: 2.5rem 0 1rem
+}
+
+.skills-section-title:first-of-type {
+    margin-top: 0
+}
+
+.skills-section-title h3 {
+    color: #1a1a2e;
+    font-size: 1.3rem;
+    font-weight: 800;
+    padding-bottom: .5rem;
+    border-bottom: 2px solid rgba(79, 140, 255, .2);
+    display: inline-block
+}
+
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -94,5 +111,9 @@
 
     .skill-card {
         padding: 1.3rem
+    }
+
+    .skills-section-title h3 {
+        font-size: 1.1rem
     }
 }

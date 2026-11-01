@@ -83,17 +83,45 @@
     background: rgba(79, 140, 255, .1)
 }
 
-.sd-diagram {
-    background: #0f1020;
-    color: #a5d6ff;
-    padding: 1.5rem;
-    border-radius: 14px;
-    font-size: .85rem;
-    line-height: 1.7;
-    overflow-x: auto;
+.sd-keypoints {
+    background: rgba(255, 255, 255, .85);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(79, 140, 255, .2);
+    border-radius: 16px;
+    padding: 1.5rem 1.8rem;
     margin-bottom: 2rem;
-    border: 1px solid rgba(79, 140, 255, .3);
-    font-family: 'Courier New', monospace
+    box-shadow: 0 10px 30px rgba(79, 140, 255, .06)
+}
+
+.sd-keypoints h3 {
+    color: #1a1a2e;
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin-bottom: .8rem
+}
+
+.sd-keypoints ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem
+}
+
+.sd-keypoints li {
+    color: #4a4a68;
+    font-size: .92rem;
+    line-height: 1.6;
+    padding-left: 1.4rem;
+    position: relative
+}
+
+.sd-keypoints li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #4f8cff;
+    font-weight: 700
 }
 
 .sd-start,
@@ -138,7 +166,8 @@
     outline: none;
     transition: border-color .2s, box-shadow .2s;
     background: #fff;
-    font-family: inherit
+    font-family: inherit;
+    color: #1a1a2e
 }
 
 .sd-input-row input:focus {
@@ -357,8 +386,7 @@
         font-size: .85rem
     }
 
-    .sd-diagram {
-        font-size: .75rem;
-        padding: 1rem
+    .sd-keypoints {
+        padding: 1.2rem
     }
 }

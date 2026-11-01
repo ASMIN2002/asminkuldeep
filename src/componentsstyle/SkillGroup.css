@@ -1,19 +1,24 @@
 .skill-group {
-    background: var(--bg-card);
-    border: 1px solid var(--border);
-    border-radius: 12px;
+    background: rgba(255, 255, 255, .85);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(79, 140, 255, .18);
+    border-radius: 16px;
     padding: 1.5rem;
-    transition: border-color .25s ease;
+    transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease;
+    box-shadow: 0 10px 30px rgba(79, 140, 255, .06);
     height: 100%
 }
 
 .skill-group:hover {
-    border-color: var(--accent)
+    transform: translateY(-4px);
+    border-color: #4f8cff;
+    box-shadow: 0 20px 50px rgba(79, 140, 255, .15)
 }
 
 .skill-group h3 {
-    color: #fff;
+    color: #1a1a2e;
     font-size: 1.05rem;
+    font-weight: 700;
     margin-bottom: 1rem
 }
 
@@ -24,17 +29,19 @@
 }
 
 .skill-items span {
-    background: #1e1e2e;
-    color: var(--text-muted);
+    background: rgba(79, 140, 255, .1);
+    color: #3b6fe0;
     font-size: .82rem;
+    font-weight: 600;
     padding: .4rem .8rem;
-    border-radius: 6px;
-    transition: background .2s, color .2s
+    border-radius: 8px;
+    transition: background .2s, color .2s, transform .2s
 }
 
 .skill-items span:hover {
-    background: var(--gradient);
-    color: #fff
+    background: linear-gradient(135deg, #4f8cff, #a855f7);
+    color: #fff;
+    transform: translateY(-2px)
 }
 
 @media(max-width:480px) {

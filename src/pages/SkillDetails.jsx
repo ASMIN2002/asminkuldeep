@@ -46,7 +46,7 @@ export default function SkillDetails() {
             return;
         }
         setNameError("");
-        setQuestions(shuffle(skill.questions));
+        setQuestions(shuffle(skill.questions).slice(0, 10));
         setAnswers({});
         setSubmitted(false);
         setExamStarted(true);
@@ -67,7 +67,7 @@ export default function SkillDetails() {
         setSubmitted(true);
     };
     const retake = () => {
-        setQuestions(shuffle(skill.questions));
+        setQuestions(shuffle(skill.questions).slice(0, 10));
         setAnswers({});
         setSubmitted(false);
         setScore(0);
@@ -86,7 +86,14 @@ export default function SkillDetails() {
                 <div className="sd-topics reveal">
                     {skill.topics.map((t) => <span key={t}>{t}</span>)}
                 </div>
-                <pre className="sd-diagram reveal">{skill.diagram}</pre>
+                {skill.keyPoints && (
+                    <div className="sd-keypoints reveal">
+                        <h3>Key Points</h3>
+                        <ul>
+                            {skill.keyPoints.map((p, i) => <li key={i}>{p}</li>)}
+                        </ul>
+                    </div>
+                )}
                 {!examStarted && (
                     <div className="sd-start reveal">
                         <h2>Take the {skill.title} Exam</h2>

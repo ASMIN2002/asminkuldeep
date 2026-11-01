@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { personal, skills, projects } from "../data/content";
 import Button from "../components/Button";
-import profile from "../assets/AerodeckDP.png";
-import heepit from "../assets/barcode.jpeg";
+import profile from "../assets/Asmin2.jpeg";
+import heepit from "../assets/Asmin1.jpeg";
 import { FaJava, FaReact, FaLeaf, FaRocket } from "react-icons/fa";
 import "../pagesstyle/Home.css";
 const roles = ["Java Full Stack Developer", "React Developer", "Spring Boot Enthusiast", "Founder of HEEPIT"];

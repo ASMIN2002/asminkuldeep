@@ -1,7 +1,7 @@
 import { personal, summary, education, languages, achievements, locationMap } from "../data/content";
 import SectionTitle from "../components/SectionTitle";
-import profile from "../assets/AerodeckDP.png";
-import manku from "../assets/manku.jpeg";
+import profile from "../assets/Asmin2.jpeg";
+import manku from "../assets/Asmin3.png";
 import "../pagesstyle/About.css";
 export default function About() {
     return (

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { navLinks, personal } from "../data/content";
-import logo from "../assets/AerodeckDP.png";
+import logo from "../assets/Asmin2.jpeg";
 import "../componentsstyle/Navbar.css";
 export default function Navbar() {
     const [open, setOpen] = useState(false);
