@@ -8,6 +8,7 @@ const SkillDetails = lazy(() => import("./pages/SkillDetails"));
 const Projects = lazy(() => import("./pages/Projects"));
 const Experience = lazy(() => import("./pages/Experience"));
 const Contact = lazy(() => import("./pages/Contact"));
+const AI = lazy(() => import("./pages/AI"));
 export default function App() {
     return (
         <Suspense fallback={<div className="loader">Loading…</div>}>
@@ -20,6 +21,7 @@ export default function App() {
                     <Route path="projects" element={<Projects />} />
                     <Route path="experience" element={<Experience />} />
                     <Route path="contact" element={<Contact />} />
+                    <Route path="ai" element={<AI />} />
                     <Route path="*" element={<Home />} />
                 </Route>
             </Routes>

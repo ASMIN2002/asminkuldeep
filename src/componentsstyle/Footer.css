@@ -2,7 +2,8 @@
     color: #9a9ab0;
     font-size: .9rem;
     border-top: 1px solid var(--border);
-    padding: 1.5rem 0
+    padding: 1.5rem 0;
+    flex-shrink: 0
 }
 
 .footer-inner {

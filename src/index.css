@@ -21,7 +21,8 @@
 html,
 body {
   width: 100%;
-  overflow-x: hidden;
+  height: 100%;
+  overflow: hidden;
   scroll-behavior: smooth
 }
 
@@ -32,6 +33,10 @@ body {
   color: var(--text)
 }
 
+#root {
+  height: 100%
+}
+
 .container {
   width: 100%;
   max-width: var(--container);
@@ -40,15 +45,15 @@ body {
   padding-right: 2rem
 }
 
-::-webkit-scrollbar {
+.root-main::-webkit-scrollbar {
   width: 10px
 }
 
-::-webkit-scrollbar-track {
+.root-main::-webkit-scrollbar-track {
   background: #eef1ff
 }
 
-::-webkit-scrollbar-thumb {
+.root-main::-webkit-scrollbar-thumb {
   background: var(--gradient);
   border-radius: 5px
 }
